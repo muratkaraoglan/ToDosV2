@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ToDosV2</string>
+    <string name="mainScreenTitle">ToDos</string>
+    <string name="saveScreenTitle">Save Screen</string>
+    <string name="updateScreenTitle">Update Screen</string>
+    <string name="searchHint">Search</string>
+    <string name="editTextNameHint">Name</string>
+    <string name="saveTitle">SAVE</string>
+    <string name="updateTitle">UPDATE</string>
 </resources>
