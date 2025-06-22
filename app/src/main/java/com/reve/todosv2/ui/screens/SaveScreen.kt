@@ -6,15 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.reve.todosv2.R
+import com.reve.todosv2.databinding.FragmentSaveScreenBinding
 
 class SaveScreen : Fragment() {
+
+    private lateinit var viewBinding: FragmentSaveScreenBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        viewBinding = FragmentSaveScreenBinding.inflate(inflater,container,false)
 
-        return inflater.inflate(R.layout.fragment_save_screen, container, false)
+        return viewBinding.root
     }
 
 }

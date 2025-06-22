@@ -6,14 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.reve.todosv2.R
+import com.reve.todosv2.databinding.FragmentMainScreenBinding
 
 class MainScreen : Fragment() {
-
+    private lateinit var viewBinding: FragmentMainScreenBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_main_screen, container, false)
+        viewBinding = FragmentMainScreenBinding.inflate(inflater,container,false)
+
+        return viewBinding.root
     }
 }

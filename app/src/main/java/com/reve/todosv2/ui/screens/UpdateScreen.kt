@@ -6,15 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.reve.todosv2.R
+import com.reve.todosv2.databinding.FragmentUpdateScreenBinding
 
 class UpdateScreen : Fragment() {
+
+    private lateinit var viewBinding: FragmentUpdateScreenBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        viewBinding = FragmentUpdateScreenBinding.inflate(inflater,container,false)
 
-        return inflater.inflate(R.layout.fragment_update_screen, container, false)
+        return viewBinding.root
     }
 
 }

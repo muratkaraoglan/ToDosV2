@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Yapılacaklar</string>
+    <string name="mainScreenTitle">Yapılacaklar</string>
+    <string name="saveScreenTitle">Kayıt Ekran</string>
+    <string name="updateScreenTitle">Güncelleme</string>
+    <string name="searchHint">Ara</string>
+    <string name="editTextNameHint">Ad</string>
+    <string name="saveTitle">KAYDET</string>
+    <string name="updateTitle">GÜNCELLE</string>
+</resources>
