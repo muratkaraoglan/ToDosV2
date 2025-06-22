@@ -15,9 +15,14 @@ class MainViewModel @Inject constructor(var toDosRepository: ToDosRepository) : 
 
     var toDosList = MutableLiveData<List<ToDos>>()
 
+    init {
+        loadToDos()
+    }
+
     fun delete(id: Int) {
         CoroutineScope(Dispatchers.Main).launch {
             toDosRepository.delete(id)
+            loadToDos()
         }
     }
 

@@ -3,10 +3,12 @@ package com.reve.todosv2.ui.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.reve.todosv2.data.entity.ToDos
 import com.reve.todosv2.databinding.CardDesignBinding
+import com.reve.todosv2.ui.screens.MainScreenDirections
 import com.reve.todosv2.ui.viewmodel.MainViewModel
 
 class ToDosAdapter(var mContext: Context, var todoList: List<ToDos>, var viewModel: MainViewModel) :
@@ -33,8 +35,13 @@ class ToDosAdapter(var mContext: Context, var todoList: List<ToDos>, var viewMod
         design.imageViewDelete.setOnClickListener {
             Snackbar.make(it, "Do you want to delete ${todo.name}?", Snackbar.LENGTH_SHORT)
                 .setAction("Yes") {
-                    viewModel.delete()
+                    viewModel.delete(todo.id)
                 }.show()
+        }
+
+        design.cardViewToDo.setOnClickListener {
+            val toUpdateScreen = MainScreenDirections.toUpdateScreen(toDo =  todo)
+            it.findNavController().navigate(toUpdateScreen)
         }
     }
 }

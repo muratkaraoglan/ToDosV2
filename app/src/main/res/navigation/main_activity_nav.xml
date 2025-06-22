@@ -9,15 +9,33 @@
         android:id="@+id/mainScreen"
         android:name="com.reve.todosv2.ui.screens.MainScreen"
         android:label="fragment_main_screen"
-        tools:layout="@layout/fragment_main_screen" />
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/toSaveScreen"
+            app:destination="@id/saveScreen" />
+        <action
+            android:id="@+id/toUpdateScreen"
+            app:destination="@id/updateScreen" />
+    </fragment>
     <fragment
         android:id="@+id/updateScreen"
         android:name="com.reve.todosv2.ui.screens.UpdateScreen"
         android:label="fragment_update_screen"
-        tools:layout="@layout/fragment_update_screen" />
+        tools:layout="@layout/fragment_update_screen" >
+        <argument
+            android:name="toDo"
+            app:argType="com.reve.todosv2.data.entity.ToDos" />
+        <action
+            android:id="@+id/updateToMainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
     <fragment
         android:id="@+id/saveScreen"
         android:name="com.reve.todosv2.ui.screens.SaveScreen"
         android:label="fragment_save_screen"
-        tools:layout="@layout/fragment_save_screen" />
+        tools:layout="@layout/fragment_save_screen" >
+        <action
+            android:id="@+id/saveToMainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
 </navigation>

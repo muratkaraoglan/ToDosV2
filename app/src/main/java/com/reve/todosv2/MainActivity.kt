@@ -2,9 +2,9 @@ package com.reve.todosv2
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-@HiltViewModel
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
