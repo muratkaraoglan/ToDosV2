@@ -17,6 +17,8 @@ class MainScreen : Fragment() {
 
         viewBinding = FragmentMainScreenBinding.inflate(inflater,container,false)
 
+
+
         return viewBinding.root
     }
 }
